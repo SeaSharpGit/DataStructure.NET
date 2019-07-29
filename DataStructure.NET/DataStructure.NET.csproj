@@ -43,6 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="线性表\IMyStack.cs" />
+    <Compile Include="线性表\单链栈\LinkStack.cs" />
+    <Compile Include="线性表\顺序栈\SeqStack.cs" />
     <Compile Include="线性表\双链表\DoubleLinkList.cs" />
     <Compile Include="线性表\双链表\DoubleNode.cs" />
     <Compile Include="线性表\IMyList.cs" />
@@ -54,6 +57,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="栈\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

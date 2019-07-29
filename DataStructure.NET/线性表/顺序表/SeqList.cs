@@ -12,15 +12,14 @@ namespace DataStructure.NET
     /// <typeparam name="T"></typeparam>
     public class SeqList<T> : IMyList<T>
     {
-        private T[] _Items;
-        public int MaxSize { get; private set; }
-        public int Last { get; private set; }
+        private readonly T[] _Items;
+        public int MaxSize { get; private set; } = 0;
+        public int Last { get; private set; } = -1;
 
         public SeqList(int size)
         {
             _Items = new T[size];
             MaxSize = size;
-            Last = -1;
         }
 
         //时间复杂度O(1)
