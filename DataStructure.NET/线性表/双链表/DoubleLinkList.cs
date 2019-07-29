@@ -6,13 +6,9 @@ using System.Threading.Tasks;
 
 namespace DataStructure.NET
 {
-    /// <summary>
-    /// 线性表中的单链表
-    /// </summary>
-    /// <typeparam name="T"></typeparam>
-    public class LinkList<T> : IMyList<T>
+    public class DoubleLinkList<T> : IMyList<T>
     {
-        public Node<T> Head { get; set; } = new Node<T>(default, null);
+        public DoubleNode<T> Head { get; set; } = new DoubleNode<T>(default, null, null);
 
         //时间复杂度O(n)
         public int GetLength()
@@ -36,13 +32,14 @@ namespace DataStructure.NET
         //时间复杂度O(n)
         public void Append(T item)
         {
-            var newNode = new Node<T>(item);
+            var newNode = new DoubleNode<T>(item);
             var node = Head;
             while (node.Next != null)
             {
                 node = node.Next;
             }
             node.Next = newNode;
+            newNode.Prev = node;
         }
 
         //时间复杂度O(n)
@@ -54,12 +51,13 @@ namespace DataStructure.NET
                 throw new Exception("Error");
             }
 
-            var newNode = new Node<T>(item);
+            var newNode = new DoubleNode<T>(item);
             if (IsEmpty())
             {
                 if (i == 1)
                 {
                     Head.Next = newNode;
+                    newNode.Prev = Head;
                 }
                 else
                 {
@@ -78,7 +76,12 @@ namespace DataStructure.NET
             if (index == i)
             {
                 l.Next = newNode;
+                newNode.Prev = l;
                 newNode.Next = r;
+                if (r != null)
+                {
+                    r.Prev = newNode;
+                }
             }
             else
             {
@@ -107,6 +110,7 @@ namespace DataStructure.NET
             if (index == i)
             {
                 l.Next = r.Next;
+                r.Next.Prev = l;
                 return r.Data;
             }
             else
@@ -176,7 +180,10 @@ namespace DataStructure.NET
             var node = Head.Next;
             while (node != null)
             {
-                Head.Next = new Node<T>(node.Data, Head.Next);
+                var newNode = new DoubleNode<T>(node.Data);
+                Head.Next.Prev = newNode;
+                newNode.Next = Head.Next;
+                Head.Next = newNode;
                 node = node.Next;
             }
         }

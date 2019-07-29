@@ -9,8 +9,15 @@ namespace DataStructure.NET
     public class DoubleNode<T>
     {
         public T Data { get; set; } = default;
-        public Node<T> Prev { get; set; } = null;
-        public Node<T> Next { get; set; } = null;
+        public DoubleNode<T> Prev { get; set; } = null;
+        public DoubleNode<T> Next { get; set; } = null;
+
+        public DoubleNode(T data, DoubleNode<T> prev, DoubleNode<T> next)
+        {
+            Data = data;
+            Prev = prev;
+            Next = next;
+        }
 
         public DoubleNode(T data)
         {

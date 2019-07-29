@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="线性表\双链表\DoubleLinkList.cs" />
     <Compile Include="线性表\双链表\DoubleNode.cs" />
     <Compile Include="线性表\IMyList.cs" />
     <Compile Include="线性表\单链表\LinkList.cs" />
