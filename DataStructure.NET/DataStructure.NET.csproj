@@ -43,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SignCompare.cs" />
     <Compile Include="Compute.cs" />
     <Compile Include="Test.cs" />
     <Compile Include="线性表\IMyStack.cs" />

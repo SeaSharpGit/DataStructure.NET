@@ -52,7 +52,7 @@ namespace DataStructure.NET
                                 signs.Push(c);
                                 break;
                             case SignCompare.Equal:
-
+                                signs.Pop();
                                 break;
                         }
                     }
@@ -95,19 +95,12 @@ namespace DataStructure.NET
             {
                 case '+':
                 case '-':
-                    if (right == '*' || right == '/')
-                    {
-                        return SignCompare.LessThan;
-                    }
-                    else
-                    {
-                        return SignCompare.MoreThan;
-                    }
+                    return right == '+' || right == '-' || right == ')' ? SignCompare.MoreThan : SignCompare.LessThan;
                 case '*':
                 case '/':
-                    return SignCompare.MoreThan;
+                    return right == '(' ? SignCompare.LessThan : SignCompare.MoreThan;
                 case '(':
-                    return SignCompare.MoreThan;
+                    return right == ')' ? SignCompare.Equal : SignCompare.LessThan;
                 case ')':
                     return SignCompare.MoreThan;
                 default:

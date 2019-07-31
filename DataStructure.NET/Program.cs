@@ -39,6 +39,11 @@ namespace DataStructure.NET
             Console.WriteLine(Compute.Run("2+22*22+2"));//488
             Console.WriteLine(Compute.Run("22+22/22+222"));//245
 
+            Console.WriteLine(Compute.Run("1+3*(22+22)/22+222"));//229
+            Console.WriteLine(Compute.Run("(1+3)*4"));//16
+            Console.WriteLine(Compute.Run("(1+3)"));//4
+
+
         }
 
     }
