@@ -9,20 +9,20 @@ namespace DataStructure.NET
     public class LinkStack<T> : IMyStack<T>
     {
         public Node<T> Top { get; set; } = null;
-        public int Num { get; private set; } = 0;
+        public int Size { get; private set; } = 0;
 
         //时间复杂度O(1)
-        public int GetLength() => Num;
+        public int GetLength() => Size;
 
         //时间复杂度O(1)
         public void Clear()
         {
-            Num = 0;
+            Size = 0;
             Top = null;
         }
 
         //时间复杂度O(1)
-        public bool IsEmpty() => Num == 0;
+        public bool IsEmpty() => Size == 0;
 
         //时间复杂度O(1)
         public void Push(T item)
@@ -35,7 +35,7 @@ namespace DataStructure.NET
             {
                 Top = new Node<T>(item, Top);
             }
-            Num++;
+            Size++;
         }
 
         //时间复杂度O(1)
@@ -47,7 +47,7 @@ namespace DataStructure.NET
             }
             var result = Top.Data;
             Top = Top.Next;
-            Num--;
+            Size--;
             return result;
         }
 

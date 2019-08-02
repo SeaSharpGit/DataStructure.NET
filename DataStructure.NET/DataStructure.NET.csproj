@@ -44,22 +44,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Compute.cs" />
-    <Compile Include="Test.cs" />
-    <Compile Include="线性表\IMyStack.cs" />
-    <Compile Include="线性表\单链栈\LinkStack.cs" />
-    <Compile Include="线性表\顺序栈\SeqStack.cs" />
-    <Compile Include="线性表\双链表\DoubleLinkList.cs" />
-    <Compile Include="线性表\双链表\DoubleNode.cs" />
-    <Compile Include="线性表\IMyList.cs" />
-    <Compile Include="线性表\单链表\LinkList.cs" />
-    <Compile Include="线性表\单链表\Node.cs" />
+    <Compile Include="线性表\队列\IMyQueue.cs" />
+    <Compile Include="线性表\栈\IMyStack.cs" />
+    <Compile Include="线性表\栈\单链栈\LinkStack.cs" />
+    <Compile Include="线性表\栈\顺序栈\SeqStack.cs" />
+    <Compile Include="线性表\列表\双链表\DoubleLinkList.cs" />
+    <Compile Include="线性表\列表\双链表\DoubleNode.cs" />
+    <Compile Include="线性表\列表\IMyList.cs" />
+    <Compile Include="线性表\列表\单链表\LinkList.cs" />
+    <Compile Include="线性表\列表\单链表\Node.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="线性表\顺序表\SeqList.cs" />
+    <Compile Include="线性表\列表\顺序表\SeqList.cs" />
+    <Compile Include="线性表\队列\顺序队列\SeqQueue.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="线性表\队列\单链队列\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
