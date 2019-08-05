@@ -56,13 +56,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="线性表\列表\顺序表\SeqList.cs" />
-    <Compile Include="线性表\队列\顺序队列\SeqQueue.cs" />
+    <Compile Include="线性表\队列\单链队列\LinkQueue.cs" />
+    <Compile Include="线性表\队列\顺序循环队列\SeqQueue.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="线性表\队列\单链队列\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
