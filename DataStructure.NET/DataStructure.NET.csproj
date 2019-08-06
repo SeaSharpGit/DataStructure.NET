@@ -43,7 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Compute.cs" />
+    <Compile Include="线性表\字符串\MyString.cs" />
+    <Compile Include="线性表\栈\表达式求值\Compute.cs" />
     <Compile Include="线性表\队列\IMyQueue.cs" />
     <Compile Include="线性表\栈\IMyStack.cs" />
     <Compile Include="线性表\栈\单链栈\LinkStack.cs" />
