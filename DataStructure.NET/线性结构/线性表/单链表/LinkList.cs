@@ -12,7 +12,7 @@ namespace DataStructure.NET
     /// <typeparam name="T"></typeparam>
     public class LinkList<T> : IMyList<T>
     {
-        public Node<T> Head { get; set; } = new Node<T>(default, null);
+        public LinkNode<T> Head { get; set; } = new LinkNode<T>(default, null);
 
         //时间复杂度O(n)
         public int GetLength()
@@ -36,7 +36,7 @@ namespace DataStructure.NET
         //时间复杂度O(n)
         public void Append(T item)
         {
-            var newNode = new Node<T>(item);
+            var newNode = new LinkNode<T>(item);
             var node = Head;
             while (node.Next != null)
             {
@@ -54,7 +54,7 @@ namespace DataStructure.NET
                 throw new Exception("Error");
             }
 
-            var newNode = new Node<T>(item);
+            var newNode = new LinkNode<T>(item);
             if (IsEmpty())
             {
                 if (i == 1)
@@ -176,7 +176,7 @@ namespace DataStructure.NET
             var node = Head.Next;
             while (node != null)
             {
-                Head.Next = new Node<T>(node.Data, Head.Next);
+                Head.Next = new LinkNode<T>(node.Data, Head.Next);
                 node = node.Next;
             }
         }

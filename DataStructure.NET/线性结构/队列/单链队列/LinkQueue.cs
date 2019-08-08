@@ -8,8 +8,8 @@ namespace DataStructure.NET
 {
     public class LinkQueue<T> : IMyQueue<T>
     {
-        private Node<T> _Front = null;
-        private Node<T> _Rear = null;
+        private LinkNode<T> _Front = null;
+        private LinkNode<T> _Rear = null;
         private int _Size = 0;
 
         //时间复杂度O(1)
@@ -33,7 +33,7 @@ namespace DataStructure.NET
         public void In(T item)
         {
             _Size++;
-            var newNode = new Node<T>(item);
+            var newNode = new LinkNode<T>(item);
             if (IsEmpty())
             {
                 _Front = newNode;

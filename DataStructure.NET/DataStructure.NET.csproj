@@ -43,6 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="树形结构\二叉树\二叉链表\DoubleLinkTree.cs" />
+    <Compile Include="树形结构\二叉树\二叉链表\DoubleLinkTreeNode.cs" />
+    <Compile Include="树形结构\二叉树\二叉链表\DoubleLinkTreeTest.cs" />
     <Compile Include="线性结构\字符串\MyString.cs" />
     <Compile Include="线性结构\栈\表达式求值\Compute.cs" />
     <Compile Include="线性结构\队列\IMyQueue.cs" />
@@ -50,10 +53,10 @@
     <Compile Include="线性结构\栈\单链栈\LinkStack.cs" />
     <Compile Include="线性结构\栈\顺序栈\SeqStack.cs" />
     <Compile Include="线性结构\线性表\双链表\DoubleLinkList.cs" />
-    <Compile Include="线性结构\线性表\双链表\DoubleNode.cs" />
+    <Compile Include="线性结构\线性表\双链表\DoubleLinkNode.cs" />
     <Compile Include="线性结构\线性表\IMyList.cs" />
     <Compile Include="线性结构\线性表\单链表\LinkList.cs" />
-    <Compile Include="线性结构\线性表\单链表\Node.cs" />
+    <Compile Include="线性结构\线性表\单链表\LinkNode.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="线性结构\线性表\顺序表\SeqList.cs" />
@@ -63,8 +66,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="树形结构\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

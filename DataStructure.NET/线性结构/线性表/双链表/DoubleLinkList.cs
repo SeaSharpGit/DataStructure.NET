@@ -8,7 +8,7 @@ namespace DataStructure.NET
 {
     public class DoubleLinkList<T> : IMyList<T>
     {
-        public DoubleNode<T> Head { get; set; } = new DoubleNode<T>(default, null, null);
+        public DoubleLinkNode<T> Head { get; set; } = new DoubleLinkNode<T>(default, null, null);
 
         //时间复杂度O(n)
         public int GetLength()
@@ -32,7 +32,7 @@ namespace DataStructure.NET
         //时间复杂度O(n)
         public void Append(T item)
         {
-            var newNode = new DoubleNode<T>(item);
+            var newNode = new DoubleLinkNode<T>(item);
             var node = Head;
             while (node.Next != null)
             {
@@ -51,7 +51,7 @@ namespace DataStructure.NET
                 throw new Exception("Error");
             }
 
-            var newNode = new DoubleNode<T>(item);
+            var newNode = new DoubleLinkNode<T>(item);
             if (IsEmpty())
             {
                 if (i == 1)
@@ -180,7 +180,7 @@ namespace DataStructure.NET
             var node = Head.Next;
             while (node != null)
             {
-                var newNode = new DoubleNode<T>(node.Data);
+                var newNode = new DoubleLinkNode<T>(node.Data);
                 Head.Next.Prev = newNode;
                 newNode.Next = Head.Next;
                 Head.Next = newNode;

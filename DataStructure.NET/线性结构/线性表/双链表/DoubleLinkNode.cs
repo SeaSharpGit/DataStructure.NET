@@ -6,27 +6,28 @@ using System.Threading.Tasks;
 
 namespace DataStructure.NET
 {
-    public class Node<T>
+    public class DoubleLinkNode<T>
     {
         public T Data { get; set; } = default;
-        public Node<T> Next { get; set; } = null;
+        public DoubleLinkNode<T> Prev { get; set; } = null;
+        public DoubleLinkNode<T> Next { get; set; } = null;
 
-        public Node(T data, Node<T> next)
+        public DoubleLinkNode(T data, DoubleLinkNode<T> prev, DoubleLinkNode<T> next)
         {
             Data = data;
+            Prev = prev;
             Next = next;
         }
-        public Node(Node<T> next)
-        {
-            Next = next;
-        }
-        public Node(T data)
+
+        public DoubleLinkNode(T data)
         {
             Data = data;
         }
-        public Node()
+
+        public DoubleLinkNode()
         {
 
         }
+
     }
 }

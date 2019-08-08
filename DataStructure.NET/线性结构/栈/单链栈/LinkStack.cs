@@ -8,7 +8,7 @@ namespace DataStructure.NET
 {
     public class LinkStack<T> : IMyStack<T>
     {
-        public Node<T> Top { get; set; } = null;
+        public LinkNode<T> Top { get; set; } = null;
         public int Size { get; private set; } = 0;
 
         //时间复杂度O(1)
@@ -29,11 +29,11 @@ namespace DataStructure.NET
         {
             if (IsEmpty())
             {
-                Top = new Node<T>(item);
+                Top = new LinkNode<T>(item);
             }
             else
             {
-                Top = new Node<T>(item, Top);
+                Top = new LinkNode<T>(item, Top);
             }
             Size++;
         }
