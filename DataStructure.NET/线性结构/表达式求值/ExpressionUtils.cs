@@ -13,11 +13,11 @@ namespace DataStructure.NET
         Equal = 2
     }
 
-    public static class Compute
+    public static class ExpressionUtils
     {
         private static readonly char[] _Signs = new char[] { '+', '-', '*', '/', '(', ')' };
 
-        public static int Run(string expression)
+        public static int Compute(string expression)
         {
             if (string.IsNullOrEmpty(expression))
             {
