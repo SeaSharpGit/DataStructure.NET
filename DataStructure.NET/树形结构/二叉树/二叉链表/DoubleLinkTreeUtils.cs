@@ -128,6 +128,50 @@ namespace DataStructure.NET
             }
         }
 
+        /// <summary>
+        /// 计算叶子节点的数量
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
+        public static int GetLeafCount(DoubleLinkTreeNode<T> node)
+        {
+            if (node == null)
+            {
+                return 0;
+            }
+            else if (node.LeftChild == null && node.RightChild == null)
+            {
+                return 1;
+            }
+            else
+            {
+                return GetLeafCount(node.LeftChild) + GetLeafCount(node.RightChild);
+            }
+        }
+
+        /// <summary>
+        /// 计算深度
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
+        public static int GetDepth(DoubleLinkTreeNode<T> node)
+        {
+            if (node == null)
+            {
+                return 0;
+            }
+            else if (node.LeftChild == null && node.RightChild == null)
+            {
+                return 1;
+            }
+            else
+            {
+                var left = GetDepth(node.LeftChild);
+                var right = GetDepth(node.RightChild);
+                return (left > right ? left : right) + 1;
+            }
+        }
+
 
 
     }

@@ -45,10 +45,10 @@
   <ItemGroup>
     <Compile Include="树形结构\二叉树\二叉链表\DoubleLinkTreeNode.cs" />
     <Compile Include="树形结构\二叉树\二叉链表\DoubleLinkTreeUtils.cs" />
-    <Compile Include="树形结构\二叉树\哈夫曼树\HuffmanNode.cs" />
-    <Compile Include="树形结构\二叉树\哈夫曼树\HuffmanTree.cs" />
+    <Compile Include="树形结构\二叉树\哈夫曼树（最优二叉树）\HuffmanNode.cs" />
+    <Compile Include="树形结构\二叉树\哈夫曼树（最优二叉树）\HuffmanTree.cs" />
     <Compile Include="线性结构\字符串\MyString.cs" />
-    <Compile Include="线性结构\表达式求值\ExpressionUtils.cs" />
+    <Compile Include="线性结构\栈\LinkUtils.cs" />
     <Compile Include="线性结构\队列\IMyQueue.cs" />
     <Compile Include="线性结构\栈\IMyStack.cs" />
     <Compile Include="线性结构\栈\单链栈\LinkStack.cs" />

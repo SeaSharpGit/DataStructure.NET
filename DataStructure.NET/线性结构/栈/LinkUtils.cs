@@ -6,17 +6,15 @@ using System.Threading.Tasks;
 
 namespace DataStructure.NET
 {
-    public enum SignCompare
-    {
-        MoreThan = 0,
-        LessThan = 1,
-        Equal = 2
-    }
-
-    public static class ExpressionUtils
+    public class LinkUtils
     {
         private static readonly char[] _Signs = new char[] { '+', '-', '*', '/', '(', ')' };
 
+        /// <summary>
+        /// 表达式求值：+-*/()
+        /// </summary>
+        /// <param name="expression"></param>
+        /// <returns></returns>
         public static int Compute(string expression)
         {
             if (string.IsNullOrEmpty(expression))
@@ -124,6 +122,13 @@ namespace DataStructure.NET
                     throw new Exception("Error");
             }
         }
-
     }
+
+    public enum SignCompare
+    {
+        MoreThan = 0,
+        LessThan = 1,
+        Equal = 2
+    }
+
 }
