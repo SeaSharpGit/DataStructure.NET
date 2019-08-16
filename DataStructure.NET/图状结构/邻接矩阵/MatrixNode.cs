@@ -1,18 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace DataStructure.NET
 {
-    class Program
+    public class MatrixNode<T>
     {
-        static void Main(string[] args)
+        public MatrixNode(T item)
+        {
+            Data = item;
+        }
+
+        public MatrixNode()
         {
 
         }
 
+        public T Data { get; set; } = default;
     }
 }

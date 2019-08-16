@@ -43,6 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="图状结构\邻接矩阵\MatrixNode.cs" />
+    <Compile Include="图状结构\邻接矩阵\无向图\NoDirectionMatrix.cs" />
+    <Compile Include="图状结构\邻接矩阵\无向图\INoDirectionGraph.cs" />
+    <Compile Include="图状结构\邻接矩阵\有向图\IDirectionGraph.cs" />
+    <Compile Include="图状结构\邻接矩阵\有向图\DirectionMatrix.cs" />
     <Compile Include="树形结构\二叉树\二叉链表\DoubleLinkTreeNode.cs" />
     <Compile Include="树形结构\二叉树\二叉链表\DoubleLinkTreeUtils.cs" />
     <Compile Include="树形结构\二叉树\哈夫曼树（最优二叉树）\HuffmanNode.cs" />
@@ -67,6 +72,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="图状结构\邻接表\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
